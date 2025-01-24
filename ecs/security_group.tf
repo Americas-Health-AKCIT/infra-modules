@@ -25,6 +25,6 @@ resource "aws_security_group" "ecs_security_groups" {
     }
 
     tags = {
-        Name = "${local.servicos_com_sg_interno[count.index].name}-${terraform.workspace}"
+        Name = "${local.servicos_com_sg_interno[count.index].name}"
     }
 }
