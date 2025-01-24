@@ -1,7 +1,7 @@
 resource "aws_security_group" "ecs_security_groups" {
     count = length(local.servicos_com_sg_interno)
 
-    name        = "${local.servicos_com_sg_interno[count.index].name}-${terraform.workspace}"
+    name        = "${local.servicos_com_sg_interno[count.index].name}"
     description = "para rodar o ${local.servicos_com_sg_interno[count.index].name} no ecs - criado pelo modulo de tf"
     vpc_id      = var.vpc_id
 
